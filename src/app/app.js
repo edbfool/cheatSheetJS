@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class KekComponent extends React.Component {
+class App extends React.Component {
   render(){
     return (
-      <div>Hellow Horde</div>
+      <div>Hello</div>
     );
   }
 }
 
-ReactDOM.render((<KekComponent />), document.getElementById('mount'));
+ReactDOM.render((<App />), document.getElementById('mount'));
