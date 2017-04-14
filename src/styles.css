@@ -1,4 +1,38 @@
+:global body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 :global #mount {
-  background-color: cyan;
+  background-color: #b3ffff;
   text-align: center;
+}
+
+:global #nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00ffff;
+}
+
+:global #home_link {
+  padding: 15px;
+}
+
+:global #nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+:global #nav li {
+  display: inline-block;
+  padding: 5px;
 }

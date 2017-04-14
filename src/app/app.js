@@ -1,12 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM, {render} from "react-dom";
+import {BrowserRouter, Route} from 'react-router-dom';
 
-class App extends React.Component {
-  render(){
-    return (
-      <div>Hello</div>
-    );
-  }
-}
+import Main from './main';
 
-ReactDOM.render((<App />), document.getElementById('mount'));
+render(
+  (<BrowserRouter>
+      <Route component={Main}/>
+  </BrowserRouter>),
+
+  document.getElementById('mount')
+);
