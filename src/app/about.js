@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
+import style from './about.css';
 
 export default class About extends Component {
   render(){
     return(
-      <h1>About Page</h1>
-    );
+      <div className={style.derp}>
+        <h1 className={style.title}>About Page</h1>
+      </div>    );
   }
 }

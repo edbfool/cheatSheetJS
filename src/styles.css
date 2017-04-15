@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.derp {
+  margin: 5px;
+  border: 1px solid black;
+}
+
 :global #nav {
   display: flex;
   flex-direction: row;

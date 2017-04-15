@@ -1,0 +1,8 @@
+.title {
+  color: red;
+}
+
+.derp {
+  composes: derp from '../styles.css';
+  background-color: rgb(210,210,210);
+}
