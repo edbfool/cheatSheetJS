@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import {Route} from 'react-router-dom';
+import {Route, NavLink} from 'react-router-dom';
+import style from './main.css';
 
 import Home from './home';
 import About from './about';
@@ -11,19 +12,19 @@ export default class Main extends Component {
       <div>
         <div id="nav">
           <div>
-            <a id="home_link" href="/">CheatSheetJS</a>
+            <NavLink activeClassName={style.active} exact id="home_link" to="/">CheatSheetJS</NavLink>
           </div>
           <div>
             <ul>
-              <li><a href="/index">Index</a></li>
-              <li><a href="/about">About us</a></li>
+              <li><NavLink activeClassName={style.active} to="/index">Index</NavLink></li>
+              <li><NavLink activeClassName={style.active} to="/about">About us</NavLink></li>
             </ul>
           </div>
         </div>
         <div id="container">
           <Route exact path="/" component={Home}/>
           <Route path="/index" component={Sheet}/>
-          <Route path="/about" component={About} />
+          <Route path="/about" component={About}/>
         </div>
       </div>
     );
