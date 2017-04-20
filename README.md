@@ -1,2 +1,3 @@
 # cheatSheetJS
-collaborative platform to share your cheat sheets using React 
+Collaborative platform to share your cheatsheets using React.
+Building using webpack.
