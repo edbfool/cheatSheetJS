@@ -3,6 +3,6 @@
 }
 
 .derp {
-  composes: derp from '../styles.css';
+  composes: derp from '../../../styles.css';
   background-color: rgb(170,170,170);
 }

@@ -1,15 +1,44 @@
 import React from "react";
-import {render} from "react-dom";
-import {BrowserRouter, Route} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
-const history = createBrowserHistory();
+import ReactDOM from "react-dom";
 
-import Main from './main';
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux';
 
-render(
-  (<BrowserRouter hsitory={history}>
-      <Route component={Main}/>
-  </BrowserRouter>),
+import thunkMiddleware from 'redux-thunk'
 
-  document.getElementById('mount')
+import createHistory from 'history/createBrowserHistory'
+import { Route } from 'react-router'
+
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+
+import {users} from '../store/reducers/reducers'
+import {pics} from '../store/reducers/reducers'
+
+// Create a history of your choosing (we're using a browser history in this case)
+const history = createHistory()
+
+// Build the middleware for intercepting and dispatching navigation actions
+const middleware = routerMiddleware(history)
+
+const store = createStore(
+    combineReducers({
+        users: users,
+        pics: pics,
+        routing: routerReducer
+    }),
+    applyMiddleware(thunkMiddleware, middleware)
+)
+
+// Now you can dispatch navigation actions from anywhere!
+// store.dispatch(push('/foo'))
+
+import Main from './components/main';
+
+ReactDOM.render(
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <Route component={Main} />
+        </ConnectedRouter>
+    </Provider>,
+    document.getElementById('mount')
 );

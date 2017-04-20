@@ -1,16 +1,22 @@
 {
   "name": "CheatSheetJS",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0",
-    "build": "webpack --progress"
+    "build": "webpack --progress",
+    "build:dev": "webpack --progress"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

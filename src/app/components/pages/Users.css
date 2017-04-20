@@ -1,0 +1,19 @@
+.title {
+    color: rebeccapurple;
+}
+
+.derp {
+    composes: derp from '../../../styles.css';
+    background-color: rgb(143, 137, 210);
+}
+
+.item {
+    display:flex;
+    justify-content: flex-start;
+    margin: 5px
+}
+
+.item div {
+    text-align: left;
+    width: 300px;
+}
