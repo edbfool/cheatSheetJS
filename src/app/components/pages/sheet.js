@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import style from './sheet.css';
+import style from './Sheet.css';
 
 export default class Sheet extends Component {
   render(){

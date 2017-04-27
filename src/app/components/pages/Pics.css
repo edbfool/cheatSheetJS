@@ -1,0 +1,11 @@
+.derp {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pictures:hover {
+  z-index: 2;
+  transform: scale(1.1);
+}

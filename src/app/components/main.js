@@ -2,10 +2,11 @@ import {Component} from 'react';
 import {Route, NavLink} from 'react-router-dom';
 import style from './main.css';
 
-import Home from './pages/home';
-import About from './pages/about';
-import Sheet from './pages/sheet';
+import Home from './pages/Home';
+import About from './pages/About';
+import Sheet from './pages/Sheet';
 import Users from './pages/Users';
+import Pics from './pages/Pics';
 
 export default class Main extends Component {
   render(){
@@ -20,6 +21,7 @@ export default class Main extends Component {
               <li><NavLink activeClassName={style.active} to="/sheets">Sheets</NavLink></li>
               <li><NavLink activeClassName={style.active} to="/users">Users</NavLink></li>
               <li><NavLink activeClassName={style.active} to="/about">About us</NavLink></li>
+              <li><NavLink activeClassName={style.active} to="/pics">Pics</NavLink></li>
             </ul>
           </div>
         </div>
@@ -28,6 +30,7 @@ export default class Main extends Component {
           <Route path="/sheets" component={Sheet}/>
           <Route path="/users" component={Users}/>
           <Route path="/about" component={About}/>
+          <Route path="/pics" component={Pics}/>
         </div>
       </div>
     );

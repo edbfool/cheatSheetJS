@@ -2,16 +2,17 @@ import {Component} from 'react';
 import { connect } from 'react-redux'
 import styles from './Users.css';
 
-import {fetchUsers} from '../../../store/reducers/actions'
+import {fetchData} from '../../../store/reducers/actions'
 
 class Users extends Component {
-    componentDidMount() {
+    componentWillMount() {
         const {dispatch} = this.props
-        dispatch(fetchUsers(this.props.location.pathname))
+        dispatch(fetchData(this.props.location.pathname, 'users'))
     }
 
     render(){
         let {users} = this.props
+        console.log(this.props);
         return(
             <div className={styles.derp}>
                 <h1 className={styles.title}>Users Page</h1>
@@ -31,7 +32,7 @@ class Users extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.users
+        users: state.fetchedUsers
     }
 };
 
