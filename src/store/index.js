@@ -1,5 +1,5 @@
-import {getUsers} from './reducers/reducers'
-export {getUsers}
+import {fetchedUsers} from './reducers/reducers'
+export {fetchedUsers}
 
-import {getPics} from './reducers/reducers'
-export {getPics}
+import {fetchedPictures} from './reducers/reducers'
+export {fetchedPictures}
